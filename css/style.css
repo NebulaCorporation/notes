@@ -31,7 +31,7 @@ body {
 }
 .todo-list li.danger label {
   text-decoration: line-through;
-  color: #5429dd;
+  color: #ffffff;
 }
 .todo-list li.danger label .checkbox-mask {
   border-color: transparent;
