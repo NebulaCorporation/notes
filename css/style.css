@@ -388,7 +388,6 @@ a:focus, a:hover {
     max-width: 1150PX;
 }
 }
-
 @media (max-width: 680px){
 svg {
     width: 70px;
