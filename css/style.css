@@ -172,13 +172,6 @@ body {
     -webkit-transition: color 0.15s linear;
     transition: color 0.15s linear;
 }
-
-
-$c-gray: #8d959b;
-$c-light: #f9f9f9;
-$c-dark: #404060;
-$c-red: #e96575;
-$c-blue: #4b96f0;
 // Base Classes
 .group:after {
   content: "";
@@ -330,10 +323,6 @@ box-shadow: 0 0 25px 0 #452579;
     padding-left: 35px;
     padding-right: 35px;
 }
-}
-}
-
-}
 #reset {
 
   color: $c-red;
@@ -345,10 +334,6 @@ box-shadow: 0 0 25px 0 #452579;
     padding-left: 35px;
     padding-right: 35px;
   }
-}
-
-.pomodoro {
-    text-align: center;
 }
 
 p {
