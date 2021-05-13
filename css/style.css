@@ -6,8 +6,6 @@ body {
 .today{
   font-size: 20px;
 }
-
-
   .animated.bounceIn, .animated.bounceOut, .animated.flipOutX, .animated.flipOutY {
     font-size: 13px;
   }
@@ -157,8 +155,6 @@ body {
   text-align: center;
       color: #fff;
 }
-
-
 .zero{
 
     top: 8px;
@@ -189,7 +185,6 @@ body {
     margin-bottom: -13px;
     margin-top: 10px;
 }
-
 button {
     font-size: 12px;
     /* border: 1px; */
@@ -205,7 +200,6 @@ button {
     text-align: center;
     background: url("dark.svg") no-repeat fixed center;
 }
-
 .change {
     background-image: url(color.svg);
     width: 96px;
@@ -213,7 +207,6 @@ button {
     background-repeat: no-repeat;
     display: inline-block;
 }
-
 .dark {
     background-color: #fff;
     width: 25px;
@@ -232,8 +225,6 @@ button {
     -webkit-font-smoothing: antialiased;
 
 }
-
-
 .white{
   background-color: #fff;
   width: 25px;
@@ -252,7 +243,6 @@ button {
   -webkit-font-smoothing: antialiased;
 
 }
-
 .white:hover{
   transform: matrix(1, 0, 0, 1, 0, -3);
   transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -272,9 +262,6 @@ button {
   transform: matrix(1, 0, 0, 1, 0, -5);
   transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-
-
-
 button[disabled] {
   color: $c-gray !important;
   background: #fff !important;
@@ -291,8 +278,6 @@ button[disabled] {
     }
   }
 }
-
-
 #start {
     background: #6200ff;
     border: none;
@@ -300,14 +285,12 @@ button[disabled] {
     padding-left: 35px;
     padding-right: 35px;
 }
-
 #start:hover {
   /* Rectangle 4: */
 
 box-shadow: 0 0 25px 0 #452579;
     color: white;
 }
-
 #inc{
   border: none;
     font-size: 40px;
@@ -335,7 +318,6 @@ box-shadow: 0 0 25px 0 #452579;
     padding-right: 35px;
   }
 }
-
 p {
     margin: 15px 0 10px;
     font-size: 46px;
@@ -345,23 +327,17 @@ p {
     /* border: 1px; */
     /* border-color: #FFF; */
 }
-
-
 .fa-ban:before {
     content: "\f05e";
     color: #8c8c8c;
     /* size: 22px; */
     font-size: 29px;
 }
-
-
 .logo {
     text-align: center;
     margin-top: 30px;
     margin-bottom: -60px;
 }
-
-
 .h4, h4 {
     font-size: 13px;
     color: #8c87ca;
@@ -382,24 +358,20 @@ a:focus, a:hover {
     color: #fbfbfb;
   text-decoration: none;
 }
-
 .fa-remove:before, .fa-close:before, .fa-times:before {
     content: "\f00d";
     color: #000;
 }
-
 /* @media (min-width: 768px){
 .container {
     width: 750px;
 }
 } */
-
 @media (max-width: 768px){
 .col-xs-offset-3 {
     margin-left: 10%;
 }
 }
-
 @media (max-width: 768px){
 .col-xs-6 {
   width: 80%;
@@ -424,17 +396,6 @@ svg {
 
 }
 }
-
 .todo-list input[type="checkbox"] {
     opacity: 0;
 }
-
-
-
-/* .col-xs-offset-3 {
-    margin-left: 10%;
-}
-.col-xs-6 {
-    width: 80%;
-} */
-
