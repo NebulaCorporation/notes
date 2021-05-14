@@ -13,6 +13,9 @@
       <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
       <link rel="stylesheet" href="css/style.css">
    </head>
+   <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
    <div class="logo">
       <a href="black/index.html">
          <img src="favicon.png" alt="Logo" height="100" width="100">
@@ -52,6 +55,13 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
       <script  src="js/index.js"></script>
       <script src="https://unpkg.com/scrollreveal%404.0.9/dist/scrollreveal.min.js"></script>
+   
+      <script>
+         setTimeout(function(){
+           $('.loader_bg').fadeToggle();
+         }, 1500);
+       </script>
+   
    </body>
    <div class"footer">
       <h4>

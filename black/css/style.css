@@ -408,8 +408,6 @@ svg {
  color:    rgb(255, 255, 255);
 }
 
-/*loader*/
-
 .loader_bg{
   position: fixed;
   z-index: 999999;
