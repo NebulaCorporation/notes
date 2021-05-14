@@ -388,3 +388,6 @@ svg {
 .todo-list input[type="checkbox"] {
     opacity: 0;
 }
+h3{
+  color: white;
+}
