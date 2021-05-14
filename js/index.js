@@ -6,7 +6,7 @@ function setDefaultState() {
   baseState[id] = {
     status: "new",
     id: id,
-    title: "📝 NebulaNotes cares about your privacy! Your notes are stored on your machine and not available on any server."
+    title: "Todost uses 🍪 to track your tasks !"
   };
   syncState(baseState);
 }

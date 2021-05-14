@@ -1,14 +1,17 @@
 /* vars */
 body {
-  background: #000000;
+  background: #fff;
   font: 14px 'Nunito', sans-serif;
 }
 .today{
   font-size: 20px;
 }
-.animated.bounceIn, .animated.bounceOut, .animated.flipOutX, .animated.flipOutY {
+
+
+  .animated.bounceIn, .animated.bounceOut, .animated.flipOutX, .animated.flipOutY {
     font-size: 13px;
-}
+  }
+
 .container {
   padding-top: 75px;
 }
@@ -16,7 +19,7 @@ body {
   margin: 20px 0;
 }
 .todo-list li {
-  background: #fff;
+  background: #000000;
   border-radius: 5px;
 /* box-shadow 0 0 15px rgba(0,0,0,.5) */
   margin-bottom: 7px;
@@ -24,7 +27,7 @@ body {
   word-break: break-word;
 }
 .todo-list li.danger {
-  background: rgb(85, 41, 220);
+      background: rgb(56, 56, 56);
 }
 .todo-list li.danger label {
   text-decoration: line-through;
@@ -49,6 +52,7 @@ body {
 .todo-list li label {
   display: block;
   padding-right: 10px;
+  color: #fff;
 }
 .todo-list li label input[type="checkbox"] {
   visibility: hidden;
@@ -128,6 +132,7 @@ body {
           box-shadow: none;
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  color: #ffffff;
 }
 .form-control:focus {
   -webkit-box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -152,7 +157,7 @@ body {
 
 .today{
   text-align: center;
-      color: #fff;
+      color: #000;
 }
 
 
@@ -188,97 +193,22 @@ $c-blue: #4b96f0;
   margin: 0 auto;
 }
 
-.color {
-    text-align: center;
-    margin-bottom: -13px;
-    margin-top: 10px;
-}
 
 button {
-    font-size: 12px;
-    /* border: 1px; */
-    color: #9c6f6f;
-    background: #5429dd;
-    padding: 13px 13px;
-    transition: all 0.3s;
-    outline: none;
-    border-color: #FFF;
-    border-radius: 20px;
-    margin-left: 5px;
+
+      font-size: 16px;
+      /* border: 1px; */
+      color: #ffffff;
+      background: #fff0;
+      padding: 10px 20px;
+      transition: all 0.3s;
+      outline: none;
+      border-color: #FFF;
+      border-radius: 35px;
+      margin-left: 5px;
     margin-right: 5px;
-    text-align: center;
-    background: url("dark.svg") no-repeat fixed center;
+  }
 }
-
-.change {
-    background-image: url(color.svg);
-    width: 96px;
-    height: 19px;
-    background-repeat: no-repeat;
-    display: inline-block;
-}
-
-.dark {
-    background-color: #fff;
-    width: 25px;
-    height: 25px;
-    border-radius: 20px;
-    background-image: url(white.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 30px;
-    margin-right: auto;
-    margin-left: 2px;
-    display: inline-block;
-    border: solid 1px #383838;
-    transform: translate(0, 0);
-    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-    -webkit-font-smoothing: antialiased;
-
-}
-
-
-.white{
-  background-color: #fff;
-  width: 25px;
-  height: 25px;
-  border-radius: 20px;
-  background-image: url(dark-check.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 30px;
-  margin-right: auto;
-  margin-left: auto;
-  display: inline-block;
-  border: solid 1px #383838;
-  transform: translate(0, 0);
-  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  -webkit-font-smoothing: antialiased;
-
-}
-
-.white:hover{
-  transform: matrix(1, 0, 0, 1, 0, -3);
-  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-
-}
-.dark:hover{
-  transform: matrix(1, 0, 0, 1, 0, -3);
-  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-
-}
-.logo{
-  transform: translate(0, 0);
-  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-.logo:hover{
-  transform: matrix(1, 0, 0, 1, 0, -5);
-  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-
-
-
 button[disabled] {
   color: $c-gray !important;
   background: #fff !important;
@@ -379,10 +309,14 @@ p {
 }
 
 a:focus, a:hover {
-    color: #fbfbfb;
+    color: #000;
   text-decoration: none;
 }
 
+a {
+    color: #000;
+  text-decoration: none;
+}
 .fa-remove:before, .fa-close:before, .fa-times:before {
     content: "\f00d";
     color: #000;
@@ -429,11 +363,99 @@ svg {
     opacity: 0;
 }
 
-
-
-/* .col-xs-offset-3 {
-    margin-left: 10%;
+.form-control{
+  background-color: #000;
 }
-.col-xs-6 {
-    width: 80%;
-} */
+
+.change {
+    background-image: url(color.svg);
+    width: 96px;
+    height: 19px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.dark {
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    background-image: url(white-check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    margin-right: auto;
+    margin-left: 2px;
+    display: inline-block;
+    border: solid 1px #383838;
+    transform: translate(0, 0);
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    -webkit-font-smoothing: antialiased;
+}
+
+.white{
+  background-color: #fff;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background-image: url(dark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  display: inline-block;
+  border: solid 1px #383838;
+  transform: translate(0, 0);
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.white:hover{
+  transform: matrix(1, 0, 0, 1, 0, -3);
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+}
+.dark:hover{
+  transform: matrix(1, 0, 0, 1, 0, -3);
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+
+}
+
+.logo{
+  transform: translate(0, 0);
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.logo:hover{
+  transform: matrix(1, 0, 0, 1, 0, -5);
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.color {
+    text-align: center;
+    margin-bottom: -13px;
+    margin-top: 10px;
+}
+
+::-webkit-input-placeholder {
+  color:    rgb(255, 255, 255);
+}
+:-moz-placeholder {
+ color:    rgb(255, 255, 255);
+ opacity:  1;
+}
+::-moz-placeholder {
+ color:    rgb(255, 255, 255);
+ opacity:  1;
+}
+:-ms-input-placeholder {
+ color:    rgb(255, 255, 255);
+}
+::-ms-input-placeholder {
+ color:    rgb(255, 255, 255);
+}
+
+::placeholder {
+ color:    rgb(255, 255, 255);
+}
