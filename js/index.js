@@ -6,7 +6,8 @@ function setDefaultState() {
   baseState[id] = {
     status: "new",
     id: id,
-    title: "📝 NebulaNotes cares about your privacy! Your notes are stored on your machine and not available on any server."
+    title:
+      "📝 NebulaNotes cares about your privacy! Your notes are stored on your machine and not available on any server.",
   };
   syncState(baseState);
 }
@@ -24,20 +25,20 @@ function pushToState(title, status, id) {
 
 function setToDone(id) {
   var baseState = getState();
-  if (baseState[id].status === 'new') {
-    baseState[id].status = 'done'
+  if (baseState[id].status === "new") {
+    baseState[id].status = "done";
   } else {
-    baseState[id].status =  'new';
+    baseState[id].status = "new";
   }
 
   syncState(baseState);
 }
 
 function deleteTodo(id) {
-  console.log(id)
+  console.log(id);
   var baseState = getState();
-  delete baseState[id]
-  syncState(baseState)
+  delete baseState[id];
+  syncState(baseState);
 }
 
 function resetState() {
@@ -67,9 +68,7 @@ function addItem(text, status, id, noUpdate) {
   var isError = $(".form-control").hasClass("hidden");
 
   if (text === "") {
-    $(".err")
-      .removeClass("hidden")
-      .addClass("animated bounceIn");
+    $(".err").removeClass("hidden").addClass("animated bounceIn");
   } else {
     $(".err").addClass("hidden");
     $(".todo-list").append(item);
@@ -79,10 +78,8 @@ function addItem(text, status, id, noUpdate) {
 
   $(".no-items").addClass("hidden");
 
-  $(".form-control")
-    .val("")
-    .attr("placeholder", "✍️ Add item...");
-  setTimeout(function() {
+  $(".form-control").val("").attr("placeholder", "✍️ Add item...");
+  setTimeout(function () {
     $(".todo-list li").removeClass("animated flipInX");
   }, 500);
 
@@ -92,34 +89,34 @@ function addItem(text, status, id, noUpdate) {
 }
 
 function refresh() {
-  $(".todo-list li").each(function(i) {
+  $(".todo-list li").each(function (i) {
     $(this)
       .delay(70 * i)
-      .queue(function() {
+      .queue(function () {
         $(this).addClass("animated bounceOutLeft");
         $(this).dequeue();
       });
   });
 
-  setTimeout(function() {
+  setTimeout(function () {
     $(".todo-list li").remove();
     $(".no-items").removeClass("hidden");
     $(".err").addClass("hidden");
   }, 800);
 }
 
-$(function() {
+$(function () {
   var err = $(".err"),
     formControl = $(".form-control"),
     isError = formControl.hasClass("hidden");
 
   if (!isError) {
-    formControl.blur(function() {
+    formControl.blur(function () {
       err.addClass("hidden");
     });
   }
 
-  $(".add-btn").on("click", function() {
+  $(".add-btn").on("click", function () {
     var itemVal = $(".form-control").val();
     addItem(itemVal);
     formControl.focus();
@@ -127,44 +124,41 @@ $(function() {
 
   $(".refresh").on("click", refresh);
 
-  $(".todo-list").on("click", 'input[type="checkbox"]', function() {
-    var li = $(this)
-      .parent()
-      .parent()
-      .parent();
+  $(".todo-list").on("click", 'input[type="checkbox"]', function () {
+    var li = $(this).parent().parent().parent();
     li.toggleClass("danger");
     li.toggleClass("animated flipInX");
 
     setToDone(li.data().id);
 
-    setTimeout(function() {
+    setTimeout(function () {
       li.removeClass("animated flipInX");
     }, 500);
   });
 
-  $(".todo-list").on("click", ".close", function() {
-    var box = $(this)
-      .parent()
-      .parent();
+  $(".todo-list").on("click", ".close", function () {
+    var box = $(this).parent().parent();
 
     if ($(".todo-list li").length == 1) {
-      box.removeClass("animated flipInX").addClass("animated                bounceOutLeft");
-      setTimeout(function() {
+      box
+        .removeClass("animated flipInX")
+        .addClass("animated                bounceOutLeft");
+      setTimeout(function () {
         box.remove();
         $(".no-items").removeClass("hidden");
         $(".refresh").addClass("hidden");
       }, 500);
     } else {
       box.removeClass("animated flipInX").addClass("animated bounceOutLeft");
-      setTimeout(function() {
+      setTimeout(function () {
         box.remove();
       }, 500);
     }
 
-    deleteTodo(box.data().id)
+    deleteTodo(box.data().id);
   });
 
-  $(".form-control").keypress(function(e) {
+  $(".form-control").keypress(function (e) {
     if (e.which == 13) {
       var itemVal = $(".form-control").val();
       addItem(itemVal);
@@ -176,9 +170,7 @@ $(function() {
 
 var todayContainer = document.querySelector(".today");
 
-
 var d = new Date();
-
 
 var weekday = new Array(7);
 weekday[0] = "Sunday 🖖";
@@ -189,9 +181,7 @@ weekday[4] = "Thursday 🤗";
 weekday[5] = "Friday 🍻";
 weekday[6] = "Saturday 😴";
 
-
 var n = weekday[d.getDay()];
-
 
 var randomWordArray = Array(
   "Oh my, it's ",
@@ -207,10 +197,9 @@ var randomWordArray = Array(
 var randomWord =
   randomWordArray[Math.floor(Math.random() * randomWordArray.length)];
 
-
 todayContainer.innerHTML = randomWord + n;
 
-$(document).ready(function() {
+$(document).ready(function () {
   var state = getState();
 
   if (!state) {
@@ -218,7 +207,7 @@ $(document).ready(function() {
     state = getState();
   }
 
-  Object.keys(state).forEach(function(todoKey) {
+  Object.keys(state).forEach(function (todoKey) {
     var todo = state[todoKey];
     addItem(todo.title, todo.status, todo.id, true);
   });
@@ -230,12 +219,10 @@ $(document).ready(function() {
     (mins = 25), (secs = 59);
   }
 
-
   set();
   function set() {
     $(".mins").text(mins);
   }
-
 
   $("#start").on("click", start_timer);
   $("#reset").on("click", reset);
@@ -243,7 +230,6 @@ $(document).ready(function() {
   $("#dec").on("click", dec);
 
   function start_timer() {
-
     set();
 
     $(".dis").attr("disabled", true);
@@ -267,7 +253,6 @@ $(document).ready(function() {
     }
   }
 
-
   function reset() {
     clearInterval(update);
     $(".secs").text("");
@@ -277,12 +262,10 @@ $(document).ready(function() {
     $(".dis").attr("disabled", false);
   }
 
-
   function inc() {
     mins++;
     $(".mins").text(mins);
   }
-
 
   function dec() {
     if (mins > 1) {
